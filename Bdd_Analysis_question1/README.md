@@ -6,17 +6,18 @@ It includes dataset parsing, statistical analysis, class-wise deep analysis, vis
 ---
 ## Project Structure
 
-bddquestion1/
-│
-├── src/
-│ ├── bddparser.py
-│ ├── classwise_analyzer.py
-│ ├── plotter.py
-│ └── dashboard.py
-│
-├── analysis.md
-├── statistics.md
-└── README.md
+## Source Code (`src/`)
+
+- **bddparser.py** – Parses BDD100K JSON and computes distributions.
+- **classwise_analyzer.py** – Performs detailed per-class analysis.
+- **plotter.py** – Generates statistical visualizations.
+- **dashboard.py** – Provides interactive analysis dashboard.
+
+## Documentation
+
+- **analysis.md** – Dataset insights and model design reasoning.
+- **statistics.md** – Train and validation split analysis.
+
 
 All core implementation files are located inside the `src/` directory.
 
