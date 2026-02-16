@@ -1,0 +1,31 @@
+{
+    "class_name": "car",
+    "num_images": 69072,
+    "num_objects": 713211,
+    "avg_objects_per_image": 10.33,
+    "truncated_pct": 9.33,
+    "occluded_pct": 67.74,
+    "weather_distribution": {
+        "clear": 36881,
+        "rainy": 5030,
+        "undefined": 7983,
+        "snowy": 5483,
+        "overcast": 8708,
+        "partly cloudy": 4859,
+        "foggy": 128
+    },
+    "timeofday_distribution": {
+        "daytime": 36388,
+        "dawn/dusk": 4974,
+        "night": 27577,
+        "undefined": 133
+    },
+    "traffic_light_color_distribution": {
+        "none": 713036,
+        "red": 78,
+        "green": 87,
+        "yellow": 10
+    }
+}
+
+
