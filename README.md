@@ -69,20 +69,16 @@ Due to hardware limitations, fine tuning was not feasible.
 
 #### Proof of Training Attempt
 
-![alt text](assets/training_log.png)
+![Training Proof](assets/training_log.png)
 ---
 
-### Attempt with Google Colab
+## 4. Attempt with Google Colab
 
 Training was attempted using Google Colab.
 
 **Issue faced:**
 
 Latest Colab Torch versions are incompatible with the MMDetection version used.
-
-Torch versions available on Colab:
-
-- torch >= 2.x  
 
 This caused:
 
@@ -94,13 +90,15 @@ As a result, remote training was not successful.
 
 ---
 
-## Issues Faced During Assignment
+## 5. Issues Faced During Assignment
 
 ### Pretrained Weight Link Not Working
 
 Some official model zoo weight links were not accessible.
 
-Paste screenshot here:
+[weight_link](https://dl.cv.ethz.ch/bdd100k/det/models/faster_rcnn_r50_fpn_1x_det_bdd100k.pth)
+
+![Error](assets/Error.png)
 
 ### Training Time Constraint
 
