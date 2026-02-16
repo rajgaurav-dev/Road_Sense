@@ -23,14 +23,6 @@
 
 ---
 
-## Impact on Model Design
-
-- Model may bias toward car class without imbalance handling.
-- Rare classes may be under-trained.
-- Multi-scale feature extraction is essential.
-
----
-
 ## Recommended Loss Functions
 
 - **Classification:** Focal Loss (to handle long-tail imbalance).
@@ -39,22 +31,22 @@
 
 ---
 
-## Forward Pass Impact
+## Impact on Model Selection
 
-In one forward pass:
-- Backbone extracts multi-scale features.
-- Detection head predicts class scores, bounding boxes, and objectness.
-- Focal Loss reduces dominance of easy car samples.
-- CIoU improves localization in crowded scenes.
+Since most car instances are heavily occluded, the model must learn to detect partially visible objects and overlapping bounding boxes. The high object density increases scene complexity and makes detection more challenging.
+
+Although the dataset is dominated by crowded scenes, it is important that the model generalizes well to scenarios with a single car. A strong feature representation will help ensure robustness across both dense and sparse scenes.
 
 ---
 
-## Recommended Architecture
+## Preferred Architecture
 
-- **Balanced (Speed + Accuracy):** YOLOv8 with FPN and multi-scale training.
-- **High Accuracy Priority:** Cascade R-CNN with FPN.
+A two-stage detector is preferred because region proposal networks help isolate candidate object regions, which improves performance in occluded and crowded environments.
 
-Both architectures handle dense scenes and multi-scale objects effectively.
+If accuracy is prioritized over speed, a two-stage model such as Faster R-CNN or Cascade R-CNN with Feature Pyramid Network (FPN) is suitable.
+
+A multi-scale feature representation is essential to detect cars of different sizes, ensuring that both small and large vehicles are properly captured in dense traffic scenarios.
+
 
 # Class: car
 
@@ -67,16 +59,15 @@ Both architectures handle dense scenes and multi-scale objects effectively.
 - Significant representation in night scenes.
 - Traffic light color attribute is mostly irrelevant for this class.
 
-## Impact on Model Selection
+# Class: train
 
-Since most car instances are heavily occluded, the model must learn to detect partially visible objects and overlapping bounding boxes. The high object density increases scene complexity and makes detection more challenging.
+- Present in 105 images with 136 total instances.
+- Very low object density with an average of 1.3 trains per image.
+- High occlusion characteristic (58.82% occluded).
+- High truncation rate (27.94%), indicating trains are often partially visible.
+- Predominantly appears in clear weather conditions.
+- Limited representation across snowy, rainy, and overcast conditions.
+- Mostly present in daytime scenes with fewer night and dawn/dusk samples.
+- Traffic light color attribute is largely irrelevant for this class.
 
-Although the dataset is dominated by crowded scenes, it is important that the model generalizes well to scenarios with a single car. A strong feature representation will help ensure robustness across both dense and sparse scenes.
 
-## Preferred Architecture
-
-A two-stage detector is preferred because region proposal networks help isolate candidate object regions, which improves performance in occluded and crowded environments.
-
-If accuracy is prioritized over speed, a two-stage model such as Faster R-CNN or Cascade R-CNN with Feature Pyramid Network (FPN) is suitable.
-
-A multi-scale feature representation is essential to detect cars of different sizes, ensuring that both small and large vehicles are properly captured in dense traffic scenarios.
