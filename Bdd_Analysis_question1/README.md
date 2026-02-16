@@ -5,7 +5,8 @@ It includes dataset parsing, statistical analysis, class-wise deep analysis, vis
 
 ---
 ## Project Structure
-
+## Output 
+- **{class_name}.json** - Detailed analysis of different classes
 ## Source Code (`src/`)
 
 - **bddparser.py** – Parses BDD100K JSON and computes distributions.
@@ -88,10 +89,7 @@ Performs detailed class-level analysis including:
 - Time-of-day distribution
 
 Example:
-```
-python src/classwise_analyzer.py --json path/to/train.json --class_name car
-
-```
+```python src/classwise_analyzer.py --json path/to/train.json --class_name car```
 
 ---
 
@@ -110,7 +108,7 @@ Generates:
 
 Example:
 
-python src/plotter.py --json path/to/train.json --stat object
+```python src/plotter.py --json path/to/train.json --stat object```
 
 
 ---
@@ -131,7 +129,7 @@ Gradio-based dashboard supporting:
 
 Run:
 
-python src/dashboard.py
+```python src/dashboard.py```
 
 
 ---
@@ -168,10 +166,10 @@ Accuracy Priority:
 
 Install dependencies:
 
-pip install matplotlib gradio opencv-python numpy
+```pip install matplotlib gradio opencv-python numpy```
 
 
-Python version: 3.8+
+```Python version: 3.8+```
 
 ---
 
