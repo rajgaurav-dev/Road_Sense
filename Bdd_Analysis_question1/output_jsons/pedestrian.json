@@ -1,0 +1,11 @@
+{
+    "class_name": "pedestrian",
+    "num_images": 0,
+    "num_objects": 0,
+    "avg_objects_per_image": 0,
+    "truncated_pct": 0,
+    "occluded_pct": 0,
+    "weather_distribution": {},
+    "timeofday_distribution": {},
+    "traffic_light_color_distribution": {}
+}
