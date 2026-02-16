@@ -69,9 +69,7 @@ Due to hardware limitations, fine tuning was not feasible.
 
 #### Proof of Training Attempt
 
-Paste screenshot here:
-
-![Training Log](./assets/training_log.png)
+![alt text](assets/training_log.png)
 ---
 
 ### Attempt with Google Colab
