@@ -1,0 +1,11 @@
+torch==2.2.2
+torchvision==0.17.2
+
+openmim==0.3.9
+mmengine==0.10.3
+mmcv==2.1.0
+
+numpy
+opencv-python
+tqdm
+scalabel
