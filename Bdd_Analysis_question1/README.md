@@ -88,9 +88,10 @@ Performs detailed class-level analysis including:
 - Time-of-day distribution
 
 Example:
-
+```
 python src/classwise_analyzer.py --json path/to/train.json --class_name car
 
+```
 
 ---
 
