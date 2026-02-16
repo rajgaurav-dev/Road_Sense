@@ -38,67 +38,10 @@ Each folder contains its own detailed README explaining implementation details.
 ## 1. Data Analysis (Completed End-to-End)
 
 Folder: `Data_Analysis/`  
-Detailed documentation available inside that folder.
+  
+Detailed documentation, implementation, dataset insights, and execution instructions are available in:
 
-### Dataset Used
-
-- BDD100K Object Detection Dataset  
-- 100K Images (5.3GB)  
-- Labels (107MB)  
-- Only 10 detection classes with bounding boxes used  
-- Drivable areas / lane marking segmentation NOT used  
-
-### Analysis Performed
-
-#### Dataset Parsing
-- Custom parser built to read images and JSON annotations  
-- Designed proper data structures for efficient analysis  
-
-#### Class Distribution Analysis
-- Distribution of objects across 10 detection classes  
-- Object density per image  
-- Occlusion percentage  
-- Truncation statistics  
-- Weather and scene condition distribution  
-
-#### Train vs Validation Split
-- Compared distribution consistency  
-- Checked class imbalance across splits  
-
-#### Anomaly & Pattern Detection
-Examples:
-- High occlusion in car class  
-- Foggy weather underrepresented  
-- Night scenes significant for some classes  
-- Certain rare object co-occurrences  
-
-#### Dashboard Visualization
-Statistical dashboard created including:
-- Class distribution  
-- Occlusion rates  
-- Weather breakdown  
-- Density histograms  
-- Unique sample visualization  
-
-#### Interesting Sample Identification
-- Highly occluded samples  
-- High object density images  
-- Rare class combinations  
-
-### Dockerized Environment
-
-The entire data analysis pipeline is containerized.
-
-No additional installation required.  
-Fully reproducible.
-
-Run:
-
-```bash
-docker build -t road_sense_analysis .
-docker run road_sense_analysis 
-
-```
+[Bdd_Analysis_question1/README.md](./Bdd_Analysis_question1/README.md)
 
 
 ## 2. Model Building & Training
