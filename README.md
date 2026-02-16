@@ -14,20 +14,20 @@ The project follows clean coding practices (PEP8), proper documentation, modular
 
 Road_Sense/
 
-Data_Analysis/  
+Bdd_Analysis_question1/  
 - README.md  
 - src/  
-- docker/  
-- dashboard/  
-- reports/  
+- output_jsons/ 
+- analysis.md
+- statistics.md
 
 Model/  
 - README.md  
-- build_model.py  
-- fine_tune.py  
+- configs/ 
+- Dataset  
 - inference.py  
-- configs/  
-- notebooks/  
+- finetune.py/  
+- utils/  
 
 README.md (this file)
 
@@ -100,16 +100,19 @@ Some official model zoo weight links were not accessible.
 
 ![Error](assets/Error.png)
 
-### Training Time Constraint
+## 6. Environment Setup
 
-CPU-only training was extremely slow (65 hours for 5 epochs).
 
-### Colab Version Compatibility
+```bash
+git clone https://github.com/rajgaurav-dev/Road_Sense.git
+cd Road_Sense
+docker build -t road_sense_analysis .
+docker run road_sense_analysis
 
-Torch version mismatch with MMDetection.
+```
+
 
 ---
-
 ## What Was Successfully Achieved
 
 - Full Data Analysis with insights  
@@ -135,37 +138,8 @@ Torch version mismatch with MMDetection.
 
 ---
 
-## How to Run
 
-### Data Analysis
-
-```bash
-cd Data_Analysis
-docker build -t road_sense_analysis .
-docker run road_sense_analysis
-
-```
-
-## Model Inference
-
-```bash
-cd Model
-python inference.py --config configs/model_config.py --image path/to/image.jpg
-
-```
 ## Author
 
 Raj Gaurav Tiwari 
 
----
-
-## Final Note
-
-This repository demonstrates:
-
-- Strong understanding of dataset analysis  
-- Ability to derive insights from large-scale datasets  
-- Experience working with modern detection frameworks  
-- Config-driven deep learning pipelines  
-- Containerization skills  
-- Practical problem solving under hardware constraints  
