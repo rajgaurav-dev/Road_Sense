@@ -4,7 +4,6 @@ This project performs structured analysis of the BDD100K object detection datase
 It includes dataset parsing, statistical analysis, class-wise deep analysis, visualization tools, and model design recommendations based on observed data patterns.
 
 ---
-
 ## Project Structure
 
 bddquestion1/
@@ -13,62 +12,11 @@ bddquestion1/
 │ ├── bddparser.py
 │ ├── classwise_analyzer.py
 │ ├── plotter.py
-│ ├── dashboard.py
+│ └── dashboard.py
 │
 ├── analysis.md
 ├── statistics.md
 └── README.md
-
-
-All core implementation files are located inside the `src/` directory.
-
----
-
-## 1. Dataset Parsing
-
-File: `src/bddparser.py`
-
-The `BDDParser` class:
-
-- Loads BDD100K JSON files (train/val).
-- Extracts image-level attributes (weather, time of day).
-- Extracts object-level annotations:
-  - Class
-  - Bounding box
-  - Area
-  - Occlusion
-  - Truncation
-- Computes:
-  - Object-level class distribution
-  - Image-level class distribution
-
-The internal data structure maps:
-
-
-All core implementation files are located inside the `src/` directory.
-
----
-
-## 1. Dataset Parsing
-
-File: `src/bddparser.py`
-
-The `BDDParser` class:
-
-- Loads BDD100K JSON files (train/val).
-- Extracts image-level attributes (weather, time of day).
-- Extracts object-level annotations:
-  - Class
-  - Bounding box
-  - Area
-  - Occlusion
-  - Truncation
-- Computes:
-  - Object-level class distribution
-  - Image-level class distribution
-
-The internal data structure maps:
-
 
 All core implementation files are located inside the `src/` directory.
 
