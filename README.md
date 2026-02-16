@@ -51,42 +51,10 @@ Detailed documentation, implementation, dataset insights, and execution instruct
 This stage focuses on building and fine-tuning object detection models using MMDetection.
 
 ---
+[Eval_and_Train_question2/README.md](./Eval_and_Train_question2/README.md)
 
-### Model Choice
 
-MMDetection framework was used because:
-
-- Highly modular  
-- Supports multiple state-of-the-art detectors  
-- Large model zoo  
-- Strong community support  
-- Config-driven architecture  
-
-Models are built using official BDD-compatible config files.
-
----
-
-### Implemented Scripts
-
-#### Model Builder Script
-
-- Builds model from MMDetection config  
-- Loads BDD dataset config  
-- Supports:
-  - Single image inference  
-  - Folder inference  
-  - Complete dataset inference  
-
-#### Fine-Tuning Script
-
-- Works with any MMDetection config  
-- Can fine-tune any model architecture  
-- Config-driven training  
-- Flexible training pipeline  
-
----
-
-### Training Limitation
+## 3. Training Limitation
 
 Training was attempted locally but:
 
@@ -97,12 +65,13 @@ Training was attempted locally but:
 - Machine Type: 64-bit CPU Machine  
 - No dedicated GPU  
 
-Due to hardware limitations, full training was not feasible.
+Due to hardware limitations, fine tuning was not feasible.
 
 #### Proof of Training Attempt
 
 Paste screenshot here:
 
+![Training Log](./assets/training_log.png)
 ---
 
 ### Attempt with Google Colab
